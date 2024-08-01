@@ -10,11 +10,15 @@
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
+    "gulp": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
     "prettier": "^3.3.3",
-    "scss": "^0.2.4"
+    "sass": "^1.77.8"
   },
   "scripts": {
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,html}\"",
-    "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix"
+    "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix",
+    "gulp": "npx gulp --gulpfile scripts/gulpfile.js"
   }
 }
