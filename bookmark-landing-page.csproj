@@ -8,4 +8,23 @@
     <AssemblyName>$(AssemblyName.Replace(' ', '_'))</AssemblyName>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\images\bg-dots.svg" />
+    <None Include="wwwroot\images\favicon-32x32.png" />
+    <None Include="wwwroot\images\icon-arrow.svg" />
+    <None Include="wwwroot\images\icon-close.svg" />
+    <None Include="wwwroot\images\icon-error.svg" />
+    <None Include="wwwroot\images\icon-facebook.svg" />
+    <None Include="wwwroot\images\icon-hamburger.svg" />
+    <None Include="wwwroot\images\icon-twitter.svg" />
+    <None Include="wwwroot\images\illustration-features-tab-1.svg" />
+    <None Include="wwwroot\images\illustration-features-tab-2.svg" />
+    <None Include="wwwroot\images\illustration-features-tab-3.svg" />
+    <None Include="wwwroot\images\illustration-hero.svg" />
+    <None Include="wwwroot\images\logo-bookmark.svg" />
+    <None Include="wwwroot\images\logo-chrome.svg" />
+    <None Include="wwwroot\images\logo-firefox.svg" />
+    <None Include="wwwroot\images\logo-opera.svg" />
+  </ItemGroup>
+
 </Project>
