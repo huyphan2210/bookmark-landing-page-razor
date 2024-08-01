@@ -1,0 +1,20 @@
+{
+  "name": "bookmark-landing-page",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/huyphan2210/bookmark-landing-page-razor.git",
+  "author": "Huy Phan <huy.phan2210@outlook.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "eslint": "^9.8.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3",
+    "scss": "^0.2.4"
+  },
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,html}\"",
+    "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix"
+  }
+}
