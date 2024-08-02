@@ -1,3 +1,16 @@
-h1 {
-  margin-block: 0;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1.5rem;
+}
+header .logo {
+  color: var(--very-dark-blue);
+  display: block;
+}
+header .navigation .menu-logo {
+  background: transparent;
+}
+header .navigation .menu-logo:hover {
+  cursor: pointer;
 }

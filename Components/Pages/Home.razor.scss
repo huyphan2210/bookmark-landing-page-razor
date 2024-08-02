@@ -1,3 +1,21 @@
-h1 {
-  margin-block: 0;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1.5rem;
+
+    .logo {
+        color: var(--very-dark-blue);
+        display: block;
+    }
+
+    .navigation {
+        .menu-logo {
+            background: transparent;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
 }
