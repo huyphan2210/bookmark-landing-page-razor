@@ -9,7 +9,7 @@ process.chdir(path.resolve(__dirname, ".."));
 task("sass", function () {
   return src("**/*.razor.scss") // Source folder
     .pipe(sass().on("error", sass.logError))
-    .pipe(dest(path.resolve(__dirname, '..')));
+    .pipe(dest(path.resolve(__dirname, "..")));
 });
 
 task("watch", function () {
