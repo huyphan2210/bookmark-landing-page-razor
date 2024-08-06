@@ -14,9 +14,7 @@
     <None Include="wwwroot\images\icon-arrow.svg" />
     <None Include="wwwroot\images\icon-close.svg" />
     <None Include="wwwroot\images\icon-error.svg" />
-    <None Include="wwwroot\images\icon-facebook.svg" />
     <None Include="wwwroot\images\icon-hamburger.svg" />
-    <None Include="wwwroot\images\icon-twitter.svg" />
     <None Include="wwwroot\images\illustration-features-tab-1.svg" />
     <None Include="wwwroot\images\illustration-features-tab-2.svg" />
     <None Include="wwwroot\images\illustration-features-tab-3.svg" />
