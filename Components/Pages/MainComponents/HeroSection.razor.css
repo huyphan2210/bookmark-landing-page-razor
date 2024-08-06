@@ -1,0 +1,9 @@
+#features .hero-image {
+  padding-inline: 1.5rem;
+}
+#features .hero-image img {
+  width: 100%;
+}
+#features .hero-image .shape {
+  height: 100%;
+}
