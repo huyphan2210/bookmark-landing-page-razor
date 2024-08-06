@@ -33,13 +33,25 @@
         <ul>
             @foreach (var nav in _navigation)
             {
-                <li>
-                    <a class="link" href="@(nav.Link)" title="@(nav.Name)">@(nav.Name)</a>
-                </li>
+                @if (nav.Name == "LOGIN")
+                {
+                    <li>
+                        <a class="link login" href="@(nav.Link)" title="@(nav.Name)">@(nav.Name)</a>
+                    </li>
+                }
+                else
+                {
+                    <li>
+                        <a class="link" href="@(nav.Link)" title="@(nav.Name)">@(nav.Name)</a>
+                    </li>
+                }
             }
         </ul>
-      
     </nav>
+    @if (_isMenuShown)
+    {
+        <SocialLinks />
+    }
 </header>
 
 @code {
