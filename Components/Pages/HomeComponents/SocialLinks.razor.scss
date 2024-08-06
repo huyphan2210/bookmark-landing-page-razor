@@ -1,0 +1,18 @@
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            svg {
+                transform: translateY(-100%);
+            }
+        }
+    }
+}
