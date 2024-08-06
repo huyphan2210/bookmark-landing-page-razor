@@ -33,18 +33,9 @@
         <ul>
             @foreach (var nav in _navigation)
             {
-                @if (nav.Name == "LOGIN")
-                {
-                    <li>
-                        <a class="link login" href="@(nav.Link)" title="@(nav.Name)">@(nav.Name)</a>
-                    </li>
-                }
-                else
-                {
-                    <li>
-                        <a class="link" href="@(nav.Link)" title="@(nav.Name)">@(nav.Name)</a>
-                    </li>
-                }
+                <li>
+                    <a class="link @(nav.Name == "LOGIN" ? "login" : "")" href="@(nav.Link)" title="@(nav.Name)">@(nav.Name)</a>
+                </li>
             }
         </ul>
     </nav>
