@@ -1,9 +1,23 @@
-#features .hero-image {
+#features {
   padding-inline: 1.5rem;
+}
+#features .hero-image {
+  position: relative;
+  margin-bottom: 30%;
 }
 #features .hero-image img {
   width: 100%;
 }
 #features .hero-image .shape {
+  background-color: var(--soft-blue);
+  width: calc(100% - 1.5rem);
+  z-index: -1;
+  border-radius: 50% 0 0 50%;
   height: 100%;
+  position: absolute;
+  top: 25%;
+  left: 3rem;
+}
+#features .hero-content {
+  text-align: center;
 }

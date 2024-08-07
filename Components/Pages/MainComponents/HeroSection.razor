@@ -1,10 +1,37 @@
-﻿<section id="features">
+﻿@using bookmark_landing_page.Models.Navigation
+<section id="features">
     <div class="hero-image">
-		<img src="images/illustration-hero.svg" loading="lazy" alt="Hero Img" />
+        <img src="images/illustration-hero.svg" loading="lazy" alt="Hero Img" />
         <div class="shape"></div>
+    </div>
+    <div class="hero-content">
+        <h1>@(HeroHeading)</h1>
+        <p>@(HeroParagraph)</p>
+        <nav class="download-links">
+            @foreach (var nav in _downloadLinks)
+            {
+                <a href="@nav.Link" target="_blank" title="@nav.Name">@nav.Name</a>
+            }
+        </nav>
     </div>
 </section>
 
 @code {
+    private const string HeroHeading = "A Simple Bookmark Manager";
+    private const string HeroParagraph = "A clean and simple interface to organize your favorite websites. Open a new browser tab and see your sites load instantly. Try it for free.";
+
+    private readonly List<Navigation> _downloadLinks = new List<Navigation>
+    {
+        new Navigation
+        {
+            Link = "https://chromewebstore.google.com/",
+            Name = "Get it on Chrome"
+        },
+        new Navigation
+        {
+            Link = "https://addons.mozilla.org/en-US/firefox/extensions/",
+            Name = "Get it on Firefox"
+        }
+    };
 
 }
