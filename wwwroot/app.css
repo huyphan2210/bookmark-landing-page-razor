@@ -3,9 +3,9 @@
 :root {
   --soft-blue: hsl(231, 69%, 60%);
   --soft-red: hsl(0, 94%, 66%);
-
   --grayish-blue: hsl(229, 8%, 60%);
   --very-dark-blue: hsl(229, 31%, 21%);
+  --padding-inline: max(5rem, calc((100vw - 90rem) / 2));
 }
 
 body {
@@ -21,14 +21,15 @@ input {
   border: none;
 }
 
-h1, h2 {
-    color: var(--very-dark-blue);
-    margin-block: 0;
+h1,
+h2 {
+  color: var(--very-dark-blue);
+  margin-block: 0;
 }
 
 p {
-    color: var(--grayish-blue);
-    line-height: 1.5;
+  color: var(--grayish-blue);
+  line-height: 1.5;
 }
 
 * {

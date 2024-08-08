@@ -21,3 +21,9 @@
 #features .hero-content {
   text-align: center;
 }
+
+@media screen and (min-width: 1024px) {
+  #features {
+    padding-inline: var(--padding-inline);
+  }
+}

@@ -69,7 +69,8 @@ header nav ul li .link.login:hover {
     flex-direction: unset;
     height: unset;
     align-items: center;
-    padding: 3rem max(5rem, (100vw - 90rem) / 2);
+    width: calc(100vw - var(--padding-inline) * 2);
+    padding: 3rem var(--padding-inline);
   }
   header .header-content .icons {
     display: none;
