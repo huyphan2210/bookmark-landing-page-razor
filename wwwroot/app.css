@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 :root {
-  --soft-blue: hsl(231, 69%, 60%);
-  --soft-red: hsl(0, 94%, 66%);
-  --grayish-blue: hsl(229, 8%, 60%);
-  --very-dark-blue: hsl(229, 31%, 21%);
-  --padding-inline: max(5rem, calc((100vw - 90rem) / 2));
+    --soft-blue: hsl(231, 69%, 60%);
+    --soft-red: hsl(0, 94%, 66%);
+    --grayish-blue: hsl(229, 8%, 60%);
+    --very-dark-blue: hsl(229, 31%, 21%);
+    --box-shadow-color: rgb(229, 231, 243);
+    --padding-inline: max(5rem, calc((100vw - 90rem) / 2));
 }
 
 body {
