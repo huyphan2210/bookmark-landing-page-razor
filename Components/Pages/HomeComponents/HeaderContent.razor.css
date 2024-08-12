@@ -66,6 +66,7 @@ header nav ul li .link.login:hover {
 
 @media screen and (min-width: 1024px) {
   header {
+    position: unset;
     flex-direction: unset;
     height: unset;
     align-items: center;
