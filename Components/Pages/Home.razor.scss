@@ -1,3 +1,9 @@
 main {
-  margin-top: 6rem;
+  margin-top: 20vh;
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        margin-top: 5rem;
+    }
 }
