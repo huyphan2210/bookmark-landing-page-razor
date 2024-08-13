@@ -1,0 +1,55 @@
+﻿@using bookmark_landing_page.Components.Pages.MainComponents.Components.FeatureSection
+
+<section id="features">
+    <h2>@(Header)</h2>
+    <p>@(Paragraph)</p>
+    <div class="feature-tabs">
+        <nav>
+            @foreach (var tab in _tabs)
+            {
+                <button @onclick="() => { CurrentTab = tab.Name; }" class="@(CurrentTab == tab.Name ? "current" : "")" type="button">@(tab.Name)</button>
+            }
+        </nav>
+        <div class="selected-tab">
+            @foreach (var tab in _tabs)
+            {
+                <Tab />
+            }
+        </div>
+    </div>
+</section>
+
+@code {
+    private class Tab
+    {
+        public string Name { get; set; } = "";
+        public string TabHeader { get; set; } = "";
+        public string TabParagraph { get; set; } = "";
+    }
+
+    private const string Header = "Features";
+    private const string Paragraph = "Out aim is to make it quick and easy for you to access your favorite websites. Your bookmarks sync between your devices so you can access them on the go.";
+    private readonly List<Tab> _tabs = new()
+    {
+        new()
+        {
+            Name = "Simple Bookmarking",
+            TabHeader = "Bookmark in one click",
+            TabParagraph = "Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favorites sites."
+        },
+        new()
+        {
+            Name = "Speedy Searching",
+            TabHeader = "Intelligent Search",
+            TabParagraph = "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all your bookmarks."
+        },
+        new()
+        {
+            Name = "Easy Sharing",
+            TabHeader = "Share you bookmarks",
+            TabParagraph = "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button."
+        }
+    };
+
+    private string CurrentTab { get; set; } = "Simple Bookmarking";
+}

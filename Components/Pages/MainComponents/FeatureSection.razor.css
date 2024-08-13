@@ -1,0 +1,44 @@
+#features {
+  margin-top: 20vh;
+  padding-inline: 1.5rem;
+  text-align: center;
+}
+#features nav {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+#features nav button {
+  display: block;
+  font-size: 1rem;
+  color: var(--grayish-blue);
+  background-color: transparent;
+  border-bottom: solid 0.125rem var(--box-shadow-color);
+  padding-block: 1rem;
+  font-weight: 500;
+  position: relative;
+}
+#features nav button:hover {
+  cursor: pointer;
+  color: var(--soft-red);
+}
+#features nav button:first-child {
+  border-top: solid 0.125rem var(--box-shadow-color);
+}
+#features nav button.current {
+  color: var(--very-dark-blue);
+}
+#features nav button.current::before {
+  width: 50%;
+}
+#features nav button::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.25rem;
+  left: 50%;
+  top: calc(100% - 0.125rem);
+  transform: translateX(-50%);
+  background-color: var(--soft-red);
+  transition: 0.3s;
+}
