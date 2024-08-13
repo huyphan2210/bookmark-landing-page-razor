@@ -1,9 +1,10 @@
 main {
-  margin-top: 20vh;
+  padding-top: 20vh;
 }
 
 @media screen and (min-width: 1024px) {
     main {
+        padding-top: 0;
         margin-top: 5rem;
     }
 }
