@@ -1,14 +1,14 @@
-#features {
+#hero {
   padding-inline: 1.5rem;
 }
-#features .hero-image {
+#hero .hero-image {
   position: relative;
   margin-bottom: 30%;
 }
-#features .hero-image img {
+#hero .hero-image img {
   width: 100%;
 }
-#features .hero-image .shape {
+#hero .hero-image .shape {
   background-color: var(--soft-blue);
   width: calc(100% - 1.5rem);
   z-index: -1;
@@ -18,17 +18,18 @@
   top: 25%;
   left: 3rem;
 }
-#features .hero-content {
+#hero .hero-content {
   text-align: center;
 }
-#features .hero-content p {
+#hero .hero-content p {
   margin-block: 2rem;
 }
-#features .hero-content .download-links {
+#hero .hero-content .download-links {
   display: flex;
+  justify-content: center;
   gap: 1rem;
 }
-#features .hero-content .download-links a {
+#hero .hero-content .download-links a {
   text-decoration: none;
   font-weight: 500;
   padding: 1rem 1.5rem;
@@ -36,26 +37,26 @@
   box-shadow: 0 0.5rem 1rem var(--box-shadow-color);
   outline: solid 0px transparent;
 }
-#features .hero-content .download-links a:first-child {
+#hero .hero-content .download-links a:first-child {
   background-color: var(--soft-blue);
   color: white;
 }
-#features .hero-content .download-links a:first-child:hover {
+#hero .hero-content .download-links a:first-child:hover {
   color: var(--soft-blue);
   background-color: transparent;
   outline: solid 1px var(--soft-blue);
 }
-#features .hero-content .download-links a:last-child {
+#hero .hero-content .download-links a:last-child {
   background-color: rgb(247, 247, 247);
   color: var(--grayish-blue);
 }
-#features .hero-content .download-links a:last-child:hover {
+#hero .hero-content .download-links a:last-child:hover {
   background-color: transparent;
   outline: solid 1px var(--grayish-blue);
 }
 
 @media screen and (min-width: 1024px) {
-  #features {
+  #hero {
     padding-inline: var(--padding-inline);
     display: flex;
     flex-direction: row-reverse;
@@ -63,21 +64,24 @@
     align-items: center;
     gap: 5rem;
   }
-  #features .hero-image {
+  #hero .hero-image {
     flex: 1;
     max-width: 50%;
     margin-bottom: 0;
   }
-  #features .hero-image .shape {
+  #hero .hero-image .shape {
     left: 5rem;
     width: calc(100% - 3rem + var(--padding-inline));
   }
-  #features .hero-content {
+  #hero .hero-content {
     flex: 1;
     max-width: 50%;
     text-align: start;
   }
-  #features .hero-content h1 {
+  #hero .hero-content h1 {
     font-size: clamp(2rem, 3vw, 4rem);
+  }
+  #hero .hero-content .download-links {
+    justify-content: flex-start;
   }
 }
