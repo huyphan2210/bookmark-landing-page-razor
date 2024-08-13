@@ -1,81 +1,81 @@
 header {
-  padding: 2rem 1.5rem;
-  width: calc(100vw - 3rem);
-  height: 2rem;
-  overflow: hidden;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-
-  &.menu-shown {
-    height: calc(100vh - 4rem);
-    background-color: hsla(229, 31%, 21%, 0.9);
-  }
-
-  .header-content {
+    padding: 2rem 1.5rem;
+    width: calc(100vw - 3rem);
+    height: 2rem;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    background-color: white;
 
-    .logo {
-      color: var(--very-dark-blue);
-      display: block;
+    &.menu-shown {
+        height: calc(100vh - 4rem);
+        background-color: hsla(229, 31%, 21%, 0.9);
     }
 
-    .icons {
-      .menu-logo {
-        padding-inline: 0;
-        background: transparent;
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-        &:hover {
-          cursor: pointer;
-        }
-      }
-    }
-  }
-
-  nav {
-    margin-top: 2rem;
-    flex: 1;
-
-    ul {
-      margin-block: 0;
-      padding: 0;
-      list-style-type: none;
-
-      li {
-        text-align: center;
-        padding-block: 1.5rem;
-        border-top: solid 1px white;
-
-        .link {
-          color: white;
-          text-decoration: none;
-          letter-spacing: 0.1rem;
-
-          &:hover {
-            color: var(--soft-red);
-          }
-
-          &.login {
+        .logo {
+            color: var(--very-dark-blue);
             display: block;
-            padding-block: 1rem;
-            outline: solid 2px white;
-
-            &:hover {
-              color: var(--soft-red);
-              background-color: transparent;
-              outline: solid 2px var(--soft-red);
-            }
-          }
         }
-      }
+
+        .icons {
+            .menu-logo {
+                padding-inline: 0;
+                background: transparent;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
     }
-  }
+
+    nav {
+        margin-top: 2rem;
+        flex: 1;
+
+        ul {
+            margin-block: 0;
+            padding: 0;
+            list-style-type: none;
+
+            li {
+                text-align: center;
+                padding-block: 1.5rem;
+                border-top: solid 1px white;
+
+                .link {
+                    color: white;
+                    text-decoration: none;
+                    letter-spacing: 0.1rem;
+
+                    &:hover {
+                        color: var(--soft-red);
+                    }
+
+                    &.login {
+                        display: block;
+                        padding-block: 1rem;
+                        outline: solid 0.125rem white;
+
+                        &:hover {
+                            color: var(--soft-red);
+                            background-color: transparent;
+                            outline: solid 0.125rem var(--soft-red);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1024px) {

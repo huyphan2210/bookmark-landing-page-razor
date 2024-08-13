@@ -56,12 +56,12 @@ header nav ul li .link:hover {
 header nav ul li .link.login {
   display: block;
   padding-block: 1rem;
-  outline: solid 2px white;
+  outline: solid 0.125rem white;
 }
 header nav ul li .link.login:hover {
   color: var(--soft-red);
   background-color: transparent;
-  outline: solid 2px var(--soft-red);
+  outline: solid 0.125rem var(--soft-red);
 }
 
 @media screen and (min-width: 1024px) {
