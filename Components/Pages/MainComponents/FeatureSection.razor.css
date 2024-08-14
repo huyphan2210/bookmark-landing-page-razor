@@ -3,12 +3,12 @@
   padding-inline: 1.5rem;
   text-align: center;
 }
-#features nav {
+#features .feature-tabs nav {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
 }
-#features nav button {
+#features .feature-tabs nav button {
   display: block;
   font-size: 1rem;
   color: var(--grayish-blue);
@@ -18,20 +18,20 @@
   font-weight: 500;
   position: relative;
 }
-#features nav button:hover {
+#features .feature-tabs nav button:hover {
   cursor: pointer;
   color: var(--soft-red);
 }
-#features nav button:first-child {
+#features .feature-tabs nav button:first-child {
   border-top: solid 0.125rem var(--box-shadow-color);
 }
-#features nav button.current {
+#features .feature-tabs nav button.current {
   color: var(--very-dark-blue);
 }
-#features nav button.current::before {
+#features .feature-tabs nav button.current::before {
   width: 50%;
 }
-#features nav button::before {
+#features .feature-tabs nav button::before {
   content: "";
   position: absolute;
   width: 0;
@@ -41,4 +41,11 @@
   transform: translateX(-50%);
   background-color: var(--soft-red);
   transition: 0.3s;
+}
+#features .feature-tabs .selected-tab {
+  position: relative;
+  margin-top: 3rem;
+}
+#features .feature-tabs .selected-tab img {
+  width: 100%;
 }
