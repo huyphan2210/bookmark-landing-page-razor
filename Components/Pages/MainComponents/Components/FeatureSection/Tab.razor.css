@@ -1,0 +1,27 @@
+.tab {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+}
+.tab.visible {
+  position: static;
+  opacity: 1;
+}
+.tab .image {
+  position: relative;
+  margin-bottom: 3rem;
+}
+.tab .image .shape {
+  background-color: var(--soft-blue);
+  width: calc(100% - 1.5rem);
+  z-index: -1;
+  border-radius: 0 50% 50% 0;
+  height: 90%;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+}
+.tab .info button {
+  display: none;
+}

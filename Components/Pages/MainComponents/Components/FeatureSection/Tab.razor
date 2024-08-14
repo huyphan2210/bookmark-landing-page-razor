@@ -1,10 +1,25 @@
-﻿<h3>@(TabHeader)</h3>
-<p>@(TabParagraph)</p>
+﻿<div class="@(IsCurrent ? "tab visible" : "tab")">
+    <div class="image">
+        @ChildContent
+        <div class="shape"></div>
+    </div>
+    <div class="info">
+        <h3>@(TabHeader)</h3>
+        <p>@(TabParagraph)</p>
+        <button type="button">More Info</button>
+    </div>
+</div>
 
 @code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
     [Parameter]
     public string TabHeader { get; set; }
 
     [Parameter]
     public string TabParagraph { get; set; }
+
+    [Parameter]
+    public bool IsCurrent { get; set; }
 }
