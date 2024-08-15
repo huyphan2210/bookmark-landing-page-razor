@@ -60,3 +60,43 @@
         }
     }
 }
+
+@media screen and (min-width: 1024px) {
+    #features {
+        padding-inline: var(--padding-inline);
+
+        h2 {
+            font-size: clamp(2rem, 2vw, 3rem);
+        }
+
+        .paragraph {
+            padding-inline: calc((100% - 35rem) / 2);
+            margin-block: 1.5rem;
+        }
+
+        .feature-tabs {
+            nav {
+                flex-direction: row;
+
+                button {
+                    width: 100%;
+
+                    &:first-child {
+                        border-top: 0;
+                    }
+
+                    &.current {
+                        &::before {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .selected-tab {
+                margin-top: 5rem;
+            }
+        }
+    }
+    
+}

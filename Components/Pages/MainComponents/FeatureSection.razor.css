@@ -49,3 +49,31 @@
 #features .feature-tabs .selected-tab img {
   width: 100%;
 }
+
+@media screen and (min-width: 1024px) {
+  #features {
+    padding-inline: var(--padding-inline);
+  }
+  #features h2 {
+    font-size: clamp(2rem, 2vw, 3rem);
+  }
+  #features .paragraph {
+    padding-inline: calc((100% - 35rem) / 2);
+    margin-block: 1.5rem;
+  }
+  #features .feature-tabs nav {
+    flex-direction: row;
+  }
+  #features .feature-tabs nav button {
+    width: 100%;
+  }
+  #features .feature-tabs nav button:first-child {
+    border-top: 0;
+  }
+  #features .feature-tabs nav button.current::before {
+    width: 100%;
+  }
+  #features .feature-tabs .selected-tab {
+    margin-top: 5rem;
+  }
+}
