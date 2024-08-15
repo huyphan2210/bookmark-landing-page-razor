@@ -3,10 +3,12 @@
     width: 100%;
     opacity: 0;
     top: 0;
+    z-index: -1;
 
     &.visible {
         position: static;
         opacity: 1;
+        z-index: 1;
     }
 
     .image {
@@ -28,6 +30,56 @@
     .info {
         button {
             display: none;
+            padding: 1rem 1.5rem;
+            color: white;
+            background-color: var(--soft-blue);
+            border-radius: 0.5rem;
+            font-weight: 500;
+
+            &:hover {
+                cursor: pointer;
+                color: var(--soft-blue);
+                background-color: transparent;
+                outline: solid 1px var(--soft-blue);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .tab {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5rem;
+
+        .image, .info {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .image {
+            .shape {
+                width: calc(100% + var(--padding-inline) - 3rem);
+                height: 100%;
+            }
+        }
+
+        .info {
+            text-align: start;
+
+            h3 {
+                font-size: clamp(2rem, 2vw, 3rem);
+                margin-block: 0
+            }
+
+            p {
+                margin-block: 1.5rem;
+            }
+
+            button {
+                display: inline-block;
+            }
         }
     }
 }
