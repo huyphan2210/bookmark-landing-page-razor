@@ -1,5 +1,9 @@
-﻿<section id="download"></section>
+﻿<section id="download">
+    <h2>@DownloadHeader</h2>
+    <p>@DownloadParagraph</p>
+</section>
 
 @code {
-
+    private string DownloadHeader { get; } = "Download the extension";
+    private string DownloadParagraph { get; } = "We've got more browsers in the pipeline. Please do let us know if you've got a favorite you'd like us to prioritize.";
 }

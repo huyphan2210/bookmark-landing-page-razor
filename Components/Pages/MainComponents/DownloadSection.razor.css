@@ -1,0 +1,11 @@
+#download {
+  margin-top: 20vh;
+  padding-inline: 1.5rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  #download {
+    padding-inline: var(--padding-inline);
+  }
+}
