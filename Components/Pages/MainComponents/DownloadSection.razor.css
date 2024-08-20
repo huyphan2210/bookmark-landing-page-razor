@@ -8,4 +8,7 @@
   #download {
     padding-inline: var(--padding-inline);
   }
+  #download p {
+    padding-inline: calc((100% - 35rem) / 2);
+  }
 }

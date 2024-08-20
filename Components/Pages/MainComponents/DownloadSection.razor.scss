@@ -7,5 +7,9 @@
 @media screen and (min-width: 1024px) {
     #download {
         padding-inline: var(--padding-inline);
+
+        p {
+            padding-inline: calc((100% - 35rem) / 2);
+        }
     }
 }
