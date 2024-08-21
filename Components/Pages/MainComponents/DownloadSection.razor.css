@@ -3,12 +3,28 @@
   padding-inline: 1.5rem;
   text-align: center;
 }
+#download .extensions {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3rem;
+}
 
 @media screen and (min-width: 1024px) {
   #download {
     padding-inline: var(--padding-inline);
   }
+  #download h2 {
+    font-size: clamp(2rem, 2vw, 3rem);
+  }
   #download p {
     padding-inline: calc((100% - 35rem) / 2);
+  }
+  #download .extensions {
+    flex-direction: unset;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
   }
 }

@@ -1,9 +1,49 @@
-﻿<section id="download">
+﻿@using bookmark_landing_page.Components.Pages.MainComponents.Components.DownloadSection
+@using bookmark_landing_page.Models.Navigation
+<section id="download">
     <h2>@DownloadHeader</h2>
     <p>@DownloadParagraph</p>
+    <div class="extensions">
+        @foreach (var extension in _extensions)
+        {
+            <ExtensionCard Extension="extension" />
+        }
+    </div>
 </section>
 
 @code {
     private string DownloadHeader { get; } = "Download the extension";
     private string DownloadParagraph { get; } = "We've got more browsers in the pipeline. Please do let us know if you've got a favorite you'd like us to prioritize.";
+
+    public class Extension : Navigation
+    {
+        public string? Description { get; set; }
+        public string? ImgSrc { get; set; }
+    }
+
+    private List<Extension> _extensions = new()
+    {
+        new()
+        {
+            Name = "Add to Chrome",
+            Description = "Minimum version 62",
+            ImgSrc = "images/logo-chrome.svg",
+            Link = "https://chromewebstore.google.com/"
+        },
+        new()
+        {
+            Name = "Add to Firefox",
+            Description = "Minimum version 55",
+            ImgSrc = "images/logo-firefox.svg",
+            Link = "https://addons.mozilla.org/en-US/firefox/extensions/"
+        },
+        new()
+        {
+            Name = "Add to Opera",
+            Description = "Minimum version 46",
+            ImgSrc = "images/logo-opera.svg",
+            Link = "https://addons.opera.com/en/extensions/"
+        }
+    };
+
 }
