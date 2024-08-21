@@ -1,0 +1,53 @@
+﻿<section id="faqs">
+    <h2>@FaqsHeading</h2>
+    <p class="faqs-paragraph">@FaqsParagraph</p>
+    <div class="questions">
+        @foreach (var faq in _faqs)
+        {
+            <details>
+                <summary>
+                    <span>@faq.Question</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" /></svg>
+                </summary>
+                <p>@faq.Answer</p>
+            </details>
+        }
+    </div>
+    <button type="button">More Info</button>
+</section>
+
+@code {
+    private const string FaqsHeading = "Frequently Asked Questions";
+    private const string FaqsParagraph = "Here are some of our FAQs. If you have any other questions you'd like us to answered please feel free to email us";
+
+    private class Faq
+    {
+        public string? Question { get; set; }
+        public string? Answer { get; set; }
+    }
+
+    private List<Faq> _faqs = new()
+    {
+        new()
+        {
+            Question = "What is Bookmark?",
+            Answer = "Bookmark is a browser extension that lets you save, organize, and quickly access your favorite web pages. You can categorize pages with folders and tags, sync them across devices, and easily search your saved content."
+        },
+        new()
+        {
+            Question = "How can I request a new browser?",
+            Answer = "To request support for a new browser, visit our support page and submit a request with details about the browser."
+        },
+        new()
+        {
+            Question = "Is there a mobile app?",
+            Answer = "No, currently we only offer a browser extension."
+        },
+        new()
+        {
+            Question = "What about other Chromium browsers?",
+            Answer = "Yes, our extension is compatible with other Chromium-based browsers like Brave and Edge."
+        },
+    };
+
+}
