@@ -1,0 +1,21 @@
+﻿@using Extension = bookmark_landing_page.Components.Pages.MainComponents.DownloadSection.Extension;
+
+<div class="extension-card">
+    <div class="extension-info">
+        <img src="@Extension?.ImgSrc" loading="lazy" alt="@Extension?.Name" />
+        <h3>@Extension?.Name</h3>
+        <p>@Extension?.Description</p>
+    </div>
+    <div class="add-extension">
+        <a class="extension-link" href="@Extension?.Link" target="_blank" title="@Extension?.Name">
+            @_buttonContent
+        </a>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Extension? Extension { get; set; }
+
+    private string _buttonContent = "Add & Install Extension";
+}

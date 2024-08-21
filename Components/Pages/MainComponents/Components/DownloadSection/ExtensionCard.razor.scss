@@ -1,0 +1,51 @@
+.extension-card {
+    width: 100%;
+    max-width: 20rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem var(--box-shadow-color);
+
+    .extension-info {
+        padding: 1.5rem;
+
+        h3 {
+            margin-top: 2rem;
+        }
+    }
+
+    .add-extension {
+        position: relative;
+        padding: 1.5rem;
+        border-top: solid 0.25rem transparent;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 0.25rem;
+            left: 0;
+            bottom: 100%;
+            background-image: url("images/bg-dots.svg");
+        }
+
+        .extension-link {
+            text-decoration: none;
+            display: block;
+            padding: 1rem 2rem;
+            background-color: var(--soft-blue);
+            color: white;
+            border-radius: 0.5rem;
+            outline: solid 0.125rem var(--soft-blue);
+
+            &:hover {
+                background-color: transparent;
+                color: var(--soft-blue);
+            }
+        }
+    }
+
+    @for $i from 2 through 3 {
+        &:nth-child(#{$i}) {
+            margin-top: ($i - 1) * 3rem;
+        }
+    }
+}
