@@ -34,11 +34,12 @@
             background-color: var(--soft-blue);
             color: white;
             border-radius: 0.5rem;
-            outline: solid 0.125rem var(--soft-blue);
+            font-weight: 500;
 
             &:hover {
                 background-color: transparent;
                 color: var(--soft-blue);
+                outline: solid 1px var(--soft-blue);
             }
         }
     }
