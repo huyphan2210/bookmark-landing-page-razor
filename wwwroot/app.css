@@ -23,7 +23,8 @@ input {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   color: var(--very-dark-blue);
   margin-block: 0;
 }
