@@ -43,10 +43,14 @@
             }
         }
     }
+}
 
-    @for $i from 2 through 3 {
-        &:nth-child(#{$i}) {
-            margin-top: ($i - 1) * 3rem;
+@media screen and (min-width: 1024px) {
+    .extension-card {
+        @for $i from 2 through 3 {
+            &:nth-child(#{$i}) {
+                margin-top: ($i - 1) * 3rem;
+            }
         }
     }
 }

@@ -38,9 +38,12 @@
   color: var(--soft-blue);
   outline: solid 1px var(--soft-blue);
 }
-.extension-card:nth-child(2) {
-  margin-top: 3rem;
-}
-.extension-card:nth-child(3) {
-  margin-top: 6rem;
+
+@media screen and (min-width: 1024px) {
+  .extension-card:nth-child(2) {
+    margin-top: 3rem;
+  }
+  .extension-card:nth-child(3) {
+    margin-top: 6rem;
+  }
 }
