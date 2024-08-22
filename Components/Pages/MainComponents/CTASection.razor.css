@@ -1,0 +1,25 @@
+#cta {
+  background-color: var(--soft-blue);
+  margin-top: 20vh;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: white;
+}
+#cta label {
+  letter-spacing: 0.2rem;
+}
+#cta-heading {
+  color: white;
+  margin-block: 1.5rem 3rem;
+  letter-spacing: 0.1rem;
+}
+#cta form input {
+  display: block;
+  width: calc(100% - 4rem);
+  padding: 1rem 2rem;
+}
+#cta form button {
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+}
