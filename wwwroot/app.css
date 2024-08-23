@@ -35,6 +35,58 @@ p {
   line-height: 1.5;
 }
 
+#cta form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#cta form div input {
+    display: block;
+    width: calc(100% - 5rem);
+    padding: 1rem 3rem 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+#cta form div input:focus {
+    outline: none;
+}
+
+#cta form div input.invalid {
+    border-width: 0.125rem 0.125rem 3rem 0.125rem;
+    border-color: var(--soft-red);
+    border-style: solid;
+}
+
+#cta form div input.valid {
+    border-width: 0;
+    border-color: var(--soft-red);
+    border-style: solid;
+}
+
+#cta form div .validation-message {
+    position: absolute;
+    font-style: italic;
+    text-align: left;
+    left: 2rem;
+    bottom: 1.5rem;
+    width: calc(100% - 4rem);
+    transform: translateY(50%);
+}
+
 * {
-  transition: 0.3s;
+    transition: 0.3s;
+}
+
+@media screen and (min-width: 1024px) {
+    #cta form {
+        flex-direction: row;
+        align-items: flex-start;
+        padding-inline: calc((100% - 35rem) / 2);
+    }
+
+    #cta form div input {
+        flex: 1;
+    }
 }

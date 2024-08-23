@@ -1,13 +1,53 @@
-﻿<section id="cta">
+﻿@using System.ComponentModel.DataAnnotations
+@implements IDisposable
+
+<section id="cta">
     <label for="cta-heading">@CtaLabel</label>
     <h2 id="cta-heading">@CtaHeading</h2>
-    <form>
-        <input type="email" placeholder="Enter your email address" />
+    <EditForm EditContext="@editContext">
+        <DataAnnotationsValidator />
+        <div class="@(IsEmailError ? "email-error" : "")">
+            <InputText @bind-Value="@_emailModel.Email" type="email" placeholder="Enter your email address" />
+            <img src="images/icon-error.svg" loading="lazy" alt="Error icon"/>
+            <ValidationMessage For="@(() => _emailModel.Email)" />
+        </div>
         <button type="submit">Contact us</button>
-    </form>
+    </EditForm>
 </section>
 
 @code {
     private const string CtaLabel = "35,000+ ALREADY JOINED";
     private const string CtaHeading = "Stay up-to-date with what we're doing";
+
+    public class EmailModel
+    {
+        [Required(ErrorMessage = "Whoops, make sure it's an email.")]
+        [EmailAddress(ErrorMessage = "Whoops, make sure it's an email.")]
+        public string? Email { get; set; }
+    }
+    private EmailModel _emailModel = new();
+    private bool IsEmailError { get; set; }
+
+
+    private EditContext editContext;
+    protected override void OnInitialized()
+    {
+        editContext = new EditContext(_emailModel);
+        editContext.OnFieldChanged += HandleFieldChanged;
+    }
+
+    public void Dispose()
+    {
+        editContext.OnFieldChanged -= HandleFieldChanged;
+    }
+
+    private void HandleFieldChanged(object? sender, FieldChangedEventArgs e)
+    {
+        if (e.FieldIdentifier.FieldName == nameof(_emailModel.Email))
+        {
+            var validationMessages = editContext.GetValidationMessages(e.FieldIdentifier);
+            IsEmailError = validationMessages.Any();
+            StateHasChanged();
+        }
+    }
 }

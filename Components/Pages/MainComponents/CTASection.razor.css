@@ -13,13 +13,42 @@
   margin-block: 1.5rem 3rem;
   letter-spacing: 0.1rem;
 }
-#cta form input {
-  display: block;
-  width: calc(100% - 4rem);
-  padding: 1rem 2rem;
+#cta form div {
+  position: relative;
+}
+#cta form div img {
+  opacity: 0;
+  position: absolute;
+  top: calc((2rem + 21px) / 2);
+  transform: translateY(-50%);
+  right: 1rem;
+}
+#cta form div.email-error img {
+  opacity: 1;
 }
 #cta form button {
   display: block;
   width: 100%;
   padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--soft-red);
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+}
+#cta form button:hover {
+  cursor: pointer;
+  color: var(--soft-red);
+  background-color: white;
+  outline: solid 1px var(--soft-red);
+}
+
+@media screen and (min-width: 1024px) {
+  #cta form button {
+    width: unset;
+  }
+  #cta form div {
+    flex: 1;
+  }
 }
