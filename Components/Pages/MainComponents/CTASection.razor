@@ -45,6 +45,7 @@
     {
         if (e.FieldIdentifier.FieldName == nameof(_emailModel.Email))
         {
+            editContext.Validate();
             var validationMessages = editContext.GetValidationMessages(e.FieldIdentifier);
             IsEmailError = validationMessages.Any();
             StateHasChanged();
